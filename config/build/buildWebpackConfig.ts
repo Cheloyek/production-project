@@ -11,7 +11,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
 
     return {
         mode,
-        // entry: path.resolve(__dirname, 'src', 'index.ts'),
+        // entry: path.resolve(__dirname, 'src', 'index.tsx'),
         entry: paths.entry,
         output: {
             filename: "[name].[contenthash].js",
