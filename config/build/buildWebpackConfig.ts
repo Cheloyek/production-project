@@ -15,14 +15,13 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         entry: paths.entry,
         output: {
             filename: "[name].[contenthash].js",
-            // path: path.resolve(__dirname, 'build'),
             path: paths.build,
             clean: true
         },
         plugins: buildPlugins(options),
         module: {
             // rules (loader) - предназначен для того чтобы обрабатывать файлы которые выходят за рамки js - png, jpg, svg, scss, css и тд.
-            rules: buildLoaders(),
+            rules: buildLoaders(options),
         },
         // указаны расширения файлов, для которых при импорте не будем указывать расширения
         // Пример: import Component from './component'
