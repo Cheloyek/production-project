@@ -4,6 +4,7 @@ export interface BuildPath {
     entry: string // путь до entry point
     build: string // путь до build
     html: string // путь до html
+    src: string
 }
 
 export interface BuildEnv {
