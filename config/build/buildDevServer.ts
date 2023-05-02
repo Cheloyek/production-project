@@ -6,6 +6,7 @@ export function buildDevServer(options: BuildOptions): WebServerConfiguration  {
     return {
         port: options.port,
         open: true, // auto open page
-        historyApiFallback: true
+        historyApiFallback: true,
+        hot: true
     }
 }
