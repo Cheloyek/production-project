@@ -8,7 +8,6 @@ interface LoaderProps {
 export const Loader = ({ className }: LoaderProps) => (
     <div className={classNames(cls.loader, {}, [className])}>
         <div />
-
         <div />
     </div>
 );
