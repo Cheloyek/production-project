@@ -27,6 +27,7 @@ module.exports = {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
         indent: [2, 4],
+        // eslint-disable-next-line max-len
         'react/jsx-filename-extension': [2, { extensions: ['.js', 'jsx', 'tsx'] }],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
@@ -41,6 +42,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'no-undef': 'off',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'max-len': ['error', { ignoreComments: true, code: 100 }],
     },
     globals: {
         __IS_DEV__: true,

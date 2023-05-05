@@ -1,4 +1,3 @@
-import { AppRoutes, RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { classNames } from 'shared';
 import { ButtonHTMLAttributes, FC } from 'react';
 import cls from './Button.module.scss';
