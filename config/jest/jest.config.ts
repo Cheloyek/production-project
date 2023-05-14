@@ -8,7 +8,7 @@ import path from 'path';
 export default {
     // Automatically clear mock calls, instances and results before every test
     clearMocks: true,
-
+    verbose: true,
     // The test environment that will be used for testing
     testEnvironment: 'jsdom',
 
@@ -47,7 +47,8 @@ export default {
 
     // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
     moduleNameMapper: {
-        '\\.s?css$': 'identity-obj-proxy',
+        // '\\.s?css$': 'identity-obj-proxy',
+        '^.+\\.(css|less|scss)$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
         'src(.*)$': '<rootDir>/src$1',
     },
