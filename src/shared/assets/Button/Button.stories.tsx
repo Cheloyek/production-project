@@ -1,8 +1,10 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { Button, ThemeButton } from './Button';
 import 'app/styles/index.scss';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from 'app/providers/ThemeProvider';
 
 export default {
     title: 'shared/assets/Button',
@@ -14,19 +16,42 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-    children: 'Primary',
+export const PrimaryLight = Template.bind({});
+PrimaryLight.args = {
+    children: 'Primary Light',
 };
+// PrimaryLight.decorators = [ThemeDecorator(Theme.LIGHT)];
 
-export const Clear = Template.bind({});
-Clear.args = {
-    children: 'Clear',
+export const PrimaryDark = Template.bind({});
+PrimaryDark.args = {
+    children: 'Primary Dark',
+};
+PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const ClearLight = Template.bind({});
+ClearLight.args = {
+    children: 'Clear Light',
     theme: ThemeButton.CLEAR,
 };
+// ClearLight.decorators = [ThemeDecorator(Theme.LIGHT)];
 
-export const Outline = Template.bind({});
-Outline.args = {
-    children: 'Outline',
+export const ClearDark = Template.bind({});
+ClearDark.args = {
+    children: 'Clear Dark',
+    theme: ThemeButton.CLEAR,
+};
+ClearDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const OutlineLight = Template.bind({});
+OutlineLight.args = {
+    children: 'Outline Light',
     theme: ThemeButton.OUTLINE,
 };
+// OutlineLight.decorators = [ThemeDecorator(Theme.LIGHT)];
+
+export const OutlineDark = Template.bind({});
+OutlineDark.args = {
+    children: 'Outline Dark',
+    theme: ThemeButton.OUTLINE,
+};
+OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
