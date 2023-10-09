@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher/LangSwitcher';
 import { useTranslation } from 'react-i18next';
-import { Button, ThemeButton } from 'shared/assets/Button/Button';
+import { Button, ButtonSize, ButtonTheme } from 'shared/assets/Button/Button';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -27,8 +27,9 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 type="button"
                 onClick={onToggle}
                 className={cls.collapseBtn}
-                theme={ThemeButton.BACKGROUND_INVERTED}
+                theme={ButtonTheme.BACKGROUND_INVERTED}
                 square
+                size={ButtonSize.XL}
             >
                 {/* {t('переключить')} */}
                 {collapsed ? '>' : '<'}

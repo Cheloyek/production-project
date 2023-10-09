@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import { Button, ThemeButton } from './Button';
+import { Button, ButtonTheme } from './Button';
 import 'app/styles/index.scss';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
@@ -31,27 +31,27 @@ PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)];
 export const ClearLight = Template.bind({});
 ClearLight.args = {
     children: 'Clear Light',
-    theme: ThemeButton.CLEAR,
+    theme: ButtonTheme.CLEAR,
 };
 // ClearLight.decorators = [ThemeDecorator(Theme.LIGHT)];
 
 export const ClearDark = Template.bind({});
 ClearDark.args = {
     children: 'Clear Dark',
-    theme: ThemeButton.CLEAR,
+    theme: ButtonTheme.CLEAR,
 };
 ClearDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const OutlineLight = Template.bind({});
 OutlineLight.args = {
     children: 'Outline Light',
-    theme: ThemeButton.OUTLINE,
+    theme: ButtonTheme.OUTLINE,
 };
 // OutlineLight.decorators = [ThemeDecorator(Theme.LIGHT)];
 
 export const OutlineDark = Template.bind({});
 OutlineDark.args = {
     children: 'Outline Dark',
-    theme: ThemeButton.OUTLINE,
+    theme: ButtonTheme.OUTLINE,
 };
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
