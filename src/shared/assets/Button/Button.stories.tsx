@@ -98,3 +98,24 @@ SquareSizeXL.args = {
     square: true,
     size: ButtonSize.XL,
 };
+
+export const OutlineSizeM = Template.bind({});
+OutlineSizeM.args = {
+    children: 'Outline M',
+    theme: ButtonTheme.OUTLINE,
+    size: ButtonSize.M,
+};
+
+export const OutlineSizeL = Template.bind({});
+OutlineSizeL.args = {
+    children: 'Outline L',
+    theme: ButtonTheme.OUTLINE,
+    size: ButtonSize.L,
+};
+
+export const OutlineSizeXL = Template.bind({});
+OutlineSizeXL.args = {
+    children: 'Outline XL',
+    theme: ButtonTheme.OUTLINE,
+    size: ButtonSize.XL,
+};
