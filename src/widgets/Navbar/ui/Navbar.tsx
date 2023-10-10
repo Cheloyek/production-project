@@ -12,12 +12,7 @@ export const Navbar = ({ className }: NavbarProps) => {
     const { t } = useTranslation();
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
-            <div className={cls.links}>
-                <AppLink to={RoutePath[AppRoutes.MAIN]} theme={AppLinkTheme.SECONDARY}>
-                    {t('Главная страница')}
-                </AppLink>
-                <AppLink to={RoutePath[AppRoutes.ABOUT]}>{t('О странице')}</AppLink>
-            </div>
+            <div className={cls.links} />
         </div>
     );
 };
