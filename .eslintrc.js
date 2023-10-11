@@ -39,6 +39,8 @@ module.exports = {
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
         'import/extensions': 'off',
+        'jsx-a11y/no-static-element-interactions': 'off',
+        'jsx-a11y/click-events-have-key-events': 'off',
         'import/no-extraneous-dependencies': 'warn',
         // 'import/no-extraneous-dependencies': ['warn', {
         //     devDependencies: ['**/*.test.js', '**/*.spec.js'],
