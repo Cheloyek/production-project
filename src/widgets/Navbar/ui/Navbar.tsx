@@ -1,7 +1,8 @@
-import { AppRoutes, RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { classNames } from 'shared';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { useTranslation } from 'react-i18next';
+import Modal from 'shared/ui/Modal/Modal';
+import React, { useCallback, useEffect, useState } from 'react';
+import { Button, ButtonTheme } from 'shared/assets/Button/Button';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -10,9 +11,25 @@ interface NavbarProps {
 
 export const Navbar = ({ className }: NavbarProps) => {
     const { t } = useTranslation();
+    const [isAuthModal, setIsAuthModal] = useState(false);
+
+    const onToggleModal = useCallback(() => {
+        setIsAuthModal((prev) => !prev);
+    }, []);
+
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
-            <div className={cls.links} />
+            <Button
+                theme={ButtonTheme.CLEAR_INVERTED}
+                className={cls.links}
+                onClick={onToggleModal}
+            >
+                {t('Войти')}
+            </Button>
+            <Modal isOpen={isAuthModal} onClose={onToggleModal}>
+                {/* eslint-disable-next-line */}
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolor doloremque ducimus eius enim, fugit iure iusto necessitatibus repellendus sed sequi sint sit temporibus! Consectetur nobis nulla officiis totam vero!
+            </Modal>
         </div>
     );
 };
